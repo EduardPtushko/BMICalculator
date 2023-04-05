@@ -8,9 +8,9 @@
 import SwiftUI
 
 @main
-struct BMI_CalculatorApp: App {
+struct BMICalculatorApp: App {
    @StateObject var calculator = Calculator()
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

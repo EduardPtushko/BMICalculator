@@ -7,25 +7,24 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @EnvironmentObject var calculator: Calculator
     @State private var isResults = false
-    
+
     var body: some View {
-        GeometryReader { gm in
+        GeometryReader { proxy in
             ZStack {
                 VStack {
                     Text("BMI CALCULATOR")
                         .font(.title3)
                         .fontWeight(.semibold)
-                    
+
                     Divider()
                         .frame(height: 6)
                         .background {
                             Color.black.opacity(0.4)
                         }
-                    
+
                     Grid(alignment: .center, horizontalSpacing: 24, verticalSpacing: 24) {
                         GridRow {
                             GenderView(type: .male, icon: "⚦", chosenGender: $calculator.gender)
@@ -35,7 +34,6 @@ struct ContentView: View {
                             HeightSlider(value: $calculator.height)
                         }
                         .gridCellColumns(2)
-                        
                         GridRow {
                             Measurements(title: "WEIGHT", value: $calculator.weight)
                             Measurements(title: "AGE", value: $calculator.age)
@@ -43,8 +41,8 @@ struct ContentView: View {
                     }
                     .padding(.vertical, 4)
                     .padding(.horizontal, 12)
-                    
-                    BottomButton(isResults: $isResults, action: calculator.calculateBMI,  title: "CALCULATE")
+
+                    BottomButton(isResults: $isResults, action: calculator.calculateBMI, title: "CALCULATE")
                 }
                 .foregroundColor(.white)
                 .edgesIgnoringSafeArea(.bottom)
@@ -52,11 +50,9 @@ struct ContentView: View {
                     Color("primary")
                 )
             }
-            
+
             Results(isResults: $isResults)
-                .offset(x: isResults ? 0 : gm.size.width)
-                .environmentObject(calculator)
-            
+                .offset(x: isResults ? 0 : proxy.size.width)
         }
     }
 }

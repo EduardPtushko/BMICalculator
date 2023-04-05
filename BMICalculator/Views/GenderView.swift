@@ -11,23 +11,21 @@ struct GenderView: View {
     let type: Gender
     let icon: String
     @Binding var chosenGender: Gender?
-    
+
     var isActive: Bool {
         if chosenGender == type {
             return true
         }
         return false
     }
-    
+
     var body: some View {
         VStack {
            Text(icon)
                 .font(.system(size: 64))
                 .foregroundColor(.white)
-            
             Text(type.rawValue)
                 .foregroundColor(Color("label-text-color"))
-                
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background {

@@ -11,7 +11,7 @@ struct BottomButton: View {
     @Binding var isResults: Bool
     var action: (() -> Void)?
     let title: String
-    
+
     var body: some View {
         Button {
             withAnimation {

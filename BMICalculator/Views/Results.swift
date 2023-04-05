@@ -10,16 +10,14 @@ import SwiftUI
 struct Results: View {
     @Binding var isResults: Bool
     @EnvironmentObject var calculator: Calculator
-    
+
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                
                 Text("Your Result")
                     .font(.title)
                     .fontWeight(.semibold)
                     .padding(.leading)
-                
                 VStack {
                     Spacer()
                     Text(calculator.getResult())
@@ -31,13 +29,13 @@ struct Results: View {
                     Text("\(calculator.bmi, specifier: "%.1f")")
                         .font(.system(size: 100))
                         .fontWeight(.semibold)
-                    
+
                     Spacer()
-                    
+
                     Text(calculator.getInterpretation())
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
-                    
+
                     Spacer()
                     HStack {
                         Spacer()
@@ -48,9 +46,8 @@ struct Results: View {
                         .fill(Color("active-card"))
                 }
                 .padding()
-                
+
                 BottomButton(isResults: $isResults, title: "RE-CALCULATE")
-                
             }
             .foregroundColor(.white)
             .edgesIgnoringSafeArea(.bottom)
@@ -58,9 +55,9 @@ struct Results: View {
         }
     }
 }
-    struct Results_Previews: PreviewProvider {
-        static var previews: some View {
-            Results(isResults: .constant(true))
-                .environmentObject(Calculator())
-        }
+struct Results_Previews: PreviewProvider {
+    static var previews: some View {
+        Results(isResults: .constant(true))
+            .environmentObject(Calculator())
     }
+}

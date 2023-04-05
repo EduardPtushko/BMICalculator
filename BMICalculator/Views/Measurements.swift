@@ -10,7 +10,7 @@ import SwiftUI
 struct Measurements: View {
     let title: String
     @Binding  var value: Int
-    
+
     var body: some View {
         VStack {
            Text(title)
@@ -31,7 +31,7 @@ struct Measurements: View {
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Color("icon-background"))
                 }
-                
+
                 Button {
                     guard value < 120  else {
                         return
