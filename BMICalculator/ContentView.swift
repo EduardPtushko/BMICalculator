@@ -43,6 +43,7 @@ struct ContentView: View {
                     .padding(.horizontal, 12)
 
                     BottomButton(isResults: $isResults, action: calculator.calculateBMI, title: "CALCULATE")
+                        .disabled(calculator.gender == nil)
                 }
                 .foregroundColor(.white)
                 .edgesIgnoringSafeArea(.bottom)

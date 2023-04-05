@@ -16,7 +16,7 @@ class Calculator: ObservableObject {
     @Published var weight: Int = 56
     @Published var height: Double = 150
     @Published var age: Int = 25
-    @Published var gender: Gender?
+    @Published var gender: Gender? = .male
     @Published var bmi: Double = 0
 
     func calculateBMI() {
@@ -44,4 +44,3 @@ class Calculator: ObservableObject {
     }
 
 }
-
