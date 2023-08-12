@@ -23,7 +23,7 @@ struct Results: View {
                     Text(calculator.getResult())
                         .font(.system(size: 24))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("result-text-color"))
+                        .foregroundColor(Theme.resultTextColor)
 
                     Spacer()
                     Text("\(calculator.bmi, specifier: "%.1f")")
@@ -43,7 +43,7 @@ struct Results: View {
                 }
                 .background {
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(Color("active-card"))
+                        .fill(Theme.activeCard)
                 }
                 .padding()
 
@@ -51,7 +51,7 @@ struct Results: View {
             }
             .foregroundColor(.white)
             .edgesIgnoringSafeArea(.bottom)
-            .background(Color("primary"))
+            .background(Theme.primary)
         }
     }
 }

@@ -14,7 +14,7 @@ struct Measurements: View {
     var body: some View {
         VStack {
            Text(title)
-                .foregroundColor(Color("label-text-color"))
+                .foregroundColor(Theme.labelTextColor)
             Text("\(value)")
                 .font(.system(size: 50))
                 .fontWeight(.bold)
@@ -26,10 +26,10 @@ struct Measurements: View {
                     }
                     value -= 1
                 } label: {
-                    Image(systemName: "minus.circle.fill")
+                    Symbols.minus
                         .symbolRenderingMode(.palette)
                         .font(.system(size: 44))
-                        .foregroundStyle(.white, Color("icon-background"))
+                        .foregroundStyle(.white, Theme.iconBackground)
                 }
 
                 Button {
@@ -38,10 +38,10 @@ struct Measurements: View {
                     }
                     value += 1
                 } label: {
-                    Image(systemName: "plus.circle.fill")
+                    Symbols.plus
                         .symbolRenderingMode(.palette)
                         .font(.system(size: 44))
-                        .foregroundStyle(.white, Color("icon-background"))
+                        .foregroundStyle(.white, Theme.iconBackground)
                 }
             }
             .font(.title)
@@ -49,7 +49,7 @@ struct Measurements: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color("active-card"))
+                .fill(Theme.activeCard)
         }
     }
 }

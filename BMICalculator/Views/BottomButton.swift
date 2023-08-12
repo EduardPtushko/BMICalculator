@@ -27,7 +27,7 @@ struct BottomButton: View {
                 .padding(.bottom, 24)
                 .foregroundColor(.white)
                 .background {
-                    Color("bottom-container")
+                    Theme.bottomContainer
                 }
                 .frame(height: 80)
         }

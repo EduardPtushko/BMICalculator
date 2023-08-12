@@ -22,7 +22,7 @@ struct HeightSlider: View {
     var body: some View {
         VStack(spacing: 0) {
            Text("HEIGHT")
-                .foregroundColor(Color("label-text-color"))
+                .foregroundColor(Theme.labelTextColor)
 
             Text("\( value, specifier: "%.0f")")
                 .font(.system(size: 44))
@@ -39,7 +39,7 @@ struct HeightSlider: View {
         .foregroundColor(.white)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color("active-card"))
+                .fill(Theme.activeCard)
         }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234058DD2A87F4220097427A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234058DC2A87F4220097427A /* Theme.swift */; };
+		234058DF2A87F6560097427A /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234058DE2A87F6560097427A /* Symbols.swift */; };
 		236AB5F12930A79C008784D6 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F02930A79C008784D6 /* GenderView.swift */; };
 		236AB5F32930A8D6008784D6 /* HeightSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F22930A8D6008784D6 /* HeightSlider.swift */; };
 		236AB5F52930AB76008784D6 /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F42930AB76008784D6 /* Measurements.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		234058DC2A87F4220097427A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		234058DE2A87F6560097427A /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		236AB5F02930A79C008784D6 /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		236AB5F22930A8D6008784D6 /* HeightSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSlider.swift; sourceTree = "<group>"; };
 		236AB5F42930AB76008784D6 /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234058DB2A87F40F0097427A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				234058DC2A87F4220097427A /* Theme.swift */,
+				234058DE2A87F6560097427A /* Symbols.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		23C8DACF292CBDB70053AB09 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 		23C8DADA292CBDB70053AB09 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
+				234058DB2A87F40F0097427A /* Resources */,
 				23C8DB06292CBE780053AB09 /* Views */,
 				23C8DB05292CBE700053AB09 /* Model */,
 				23C8DADB292CBDB70053AB09 /* BMICalculatorApp.swift */,
@@ -258,10 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234058DD2A87F4220097427A /* Theme.swift in Sources */,
 				236AB5F72930AC05008784D6 /* Results.swift in Sources */,
 				236AB5F12930A79C008784D6 /* GenderView.swift in Sources */,
 				236BAEC02937C7E000DE02D2 /* Calculator.swift in Sources */,
 				236AB5F32930A8D6008784D6 /* HeightSlider.swift in Sources */,
+				234058DF2A87F6560097427A /* Symbols.swift in Sources */,
 				23C8DADE292CBDB70053AB09 /* ContentView.swift in Sources */,
 				236AB5F52930AB76008784D6 /* Measurements.swift in Sources */,
 				236BAEC22937E3FD00DE02D2 /* BottomButton.swift in Sources */,

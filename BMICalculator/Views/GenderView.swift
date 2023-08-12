@@ -25,12 +25,12 @@ struct GenderView: View {
                 .font(.system(size: 64))
                 .foregroundColor(.white)
             Text(type.rawValue)
-                .foregroundColor(Color("label-text-color"))
+                .foregroundColor(Theme.labelTextColor)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(isActive ?  Color("active-card") : Color("inactive-card") )
+                .fill(isActive ?  Theme.activeCard : Theme.inactiveCard )
         }
         .onTapGesture {
             chosenGender = isActive ? nil :  type
