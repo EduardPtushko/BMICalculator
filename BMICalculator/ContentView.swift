@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var calculator: Calculator
-    @State private var isResults = false
+
+    var showingResults: Bool {
+        calculator.bmiResult != nil
+    }
 
     var body: some View {
         GeometryReader { proxy in
@@ -30,20 +33,21 @@ struct ContentView: View {
                             GenderView(type: .male, icon: "⚦", chosenGender: $calculator.gender)
                             GenderView(type: .female, icon: "♀", chosenGender: $calculator.gender)
                         }
+
                         GridRow {
-                            HeightSlider(value: $calculator.height)
+                            HeightSliderView(value: $calculator.height)
                         }
                         .gridCellColumns(2)
+
                         GridRow {
-                            Measurements(title: "WEIGHT", value: $calculator.weight)
-                            Measurements(title: "AGE", value: $calculator.age)
+                            MeasurementsView(title: "WEIGHT", value: $calculator.weight)
+                            MeasurementsView(title: "AGE", value: $calculator.age)
                         }
                     }
                     .padding(.vertical, 4)
                     .padding(.horizontal, 12)
 
-                    BottomButton(isResults: $isResults, action: calculator.calculateBMI, title: "CALCULATE")
-                        .disabled(calculator.gender == nil)
+                    BottomButton(title: "CALCULATE", action: calculator.calculateBMI)
                 }
                 .foregroundColor(.white)
                 .edgesIgnoringSafeArea(.bottom)
@@ -52,8 +56,8 @@ struct ContentView: View {
                 )
             }
 
-            Results(isResults: $isResults)
-                .offset(x: isResults ? 0 : proxy.size.width)
+            ResultsView()
+                .offset(x: showingResults ? 0 : proxy.size.width)
         }
     }
 }

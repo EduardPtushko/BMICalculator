@@ -1,5 +1,5 @@
 //
-//  Measurements.swift
+//  MeasurementsView.swift
 //  BMI Calculator
 //
 //  Created by Eduard on 25.11.2022.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Measurements: View {
+struct MeasurementsView: View {
     let title: String
-    @Binding  var value: Int
+    @Binding var value: Int
 
     var body: some View {
         VStack {
-           Text(title)
+            Text(title)
                 .foregroundColor(Theme.labelTextColor)
             Text("\(value)")
                 .font(.system(size: 50))
@@ -21,7 +21,7 @@ struct Measurements: View {
                 .foregroundColor(.white)
             HStack {
                 Button {
-                    guard value >= 0  else {
+                    guard value >= 0 else {
                         return
                     }
                     value -= 1
@@ -33,7 +33,7 @@ struct Measurements: View {
                 }
 
                 Button {
-                    guard value < 120  else {
+                    guard value < 120 else {
                         return
                     }
                     value += 1
@@ -56,6 +56,6 @@ struct Measurements: View {
 
 struct Measurements_Previews: PreviewProvider {
     static var previews: some View {
-        Measurements(title: "WEIGHT", value: .constant(24))
+        MeasurementsView(title: "WEIGHT", value: .constant(24))
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Genger.swift
+//  GenderView.swift
 //  BMI Calculator
 //
 //  Created by Eduard on 25.11.2022.
@@ -10,7 +10,7 @@ import SwiftUI
 struct GenderView: View {
     let type: Gender
     let icon: String
-    @Binding var chosenGender: Gender?
+    @Binding var chosenGender: Gender
 
     var isActive: Bool {
         if chosenGender == type {
@@ -21,7 +21,7 @@ struct GenderView: View {
 
     var body: some View {
         VStack {
-           Text(icon)
+            Text(icon)
                 .font(.system(size: 64))
                 .foregroundColor(.white)
             Text(type.rawValue)
@@ -30,10 +30,10 @@ struct GenderView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .fill(isActive ?  Theme.activeCard : Theme.inactiveCard )
+                .fill(isActive ? Theme.activeCard : Theme.inactiveCard)
         }
         .onTapGesture {
-            chosenGender = isActive ? nil :  type
+            chosenGender = type
         }
     }
 }

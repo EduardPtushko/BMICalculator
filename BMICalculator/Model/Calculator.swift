@@ -7,40 +7,30 @@
 
 import Foundation
 
+class Calculator: ObservableObject {
+    @Published var weight: Int = 56
+    @Published var height: Double = 80
+    @Published var age: Int = 25
+    @Published var gender: Gender = .male
+    @Published var bmiResult: BMIResult?
+
+    func calculateBMI() {
+        let bmi = Double(weight) / pow(height / 100, 2)
+        bmiResult = getResult(bmi)
+    }
+
+    private func getResult(_ bmi: Double) -> BMIResult {
+        if bmi >= 25 {
+            return .overweight(bmi)
+        } else if bmi > 18.5 {
+            return .normal(bmi)
+        } else {
+            return .underweight(bmi)
+        }
+    }
+}
+
 enum Gender: String {
     case male = "MALE"
     case female = "FEMALE"
-}
-
-class Calculator: ObservableObject {
-    @Published var weight: Int = 56
-    @Published var height: Double = 150
-    @Published var age: Int = 25
-    @Published var gender: Gender? = .male
-    @Published var bmi: Double = 0
-
-    func calculateBMI() {
-        bmi = Double(weight) / pow(height / 100, 2)
-    }
-
-    func getResult() -> String {
-        if bmi >= 25 {
-            return "Overweight"
-        } else if bmi > 18.5 {
-            return "Normal"
-        } else {
-            return "Underweight"
-        }
-    }
-
-    func getInterpretation() -> String {
-        if bmi >= 25 {
-            return "You have a higher than normal body weight. Try to exercise more."
-        } else if bmi >= 18.5 {
-            return "You have a normal body weight. Good job!"
-        } else {
-            return "You have a lower than normal body weight. You can eat a bit more."
-        }
-    }
-
 }

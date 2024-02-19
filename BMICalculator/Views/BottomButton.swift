@@ -8,34 +8,32 @@
 import SwiftUI
 
 struct BottomButton: View {
-    @Binding var isResults: Bool
-    var action: (() -> Void)?
     let title: String
+    var action: () -> Void
 
     var body: some View {
         Button {
             withAnimation {
-                action?()
-                isResults.toggle()
+                action()
             }
         } label: {
             Text(title)
                 .font(.title3)
                 .fontWeight(.bold)
-                .frame(maxWidth: .infinity)
                 .padding()
-                .padding(.bottom, 24)
+                .padding(.bottom)
+                .frame(maxWidth: .infinity)
+                .frame(maxHeight: 80)
                 .foregroundColor(.white)
                 .background {
                     Theme.bottomContainer
                 }
-                .frame(height: 80)
         }
     }
 }
 
 struct BottomButton_Previews: PreviewProvider {
     static var previews: some View {
-        BottomButton(isResults: .constant(true), action: {}, title: "CALCULATE")
+        BottomButton(title: "CALCULATE", action: {})
     }
 }

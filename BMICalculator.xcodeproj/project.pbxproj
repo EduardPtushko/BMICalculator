@@ -10,9 +10,9 @@
 		234058DD2A87F4220097427A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234058DC2A87F4220097427A /* Theme.swift */; };
 		234058DF2A87F6560097427A /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234058DE2A87F6560097427A /* Symbols.swift */; };
 		236AB5F12930A79C008784D6 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F02930A79C008784D6 /* GenderView.swift */; };
-		236AB5F32930A8D6008784D6 /* HeightSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F22930A8D6008784D6 /* HeightSlider.swift */; };
-		236AB5F52930AB76008784D6 /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F42930AB76008784D6 /* Measurements.swift */; };
-		236AB5F72930AC05008784D6 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F62930AC05008784D6 /* Results.swift */; };
+		236AB5F32930A8D6008784D6 /* HeightSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F22930A8D6008784D6 /* HeightSliderView.swift */; };
+		236AB5F52930AB76008784D6 /* MeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F42930AB76008784D6 /* MeasurementsView.swift */; };
+		236AB5F72930AC05008784D6 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AB5F62930AC05008784D6 /* ResultsView.swift */; };
 		236BAEC02937C7E000DE02D2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BAEBF2937C7E000DE02D2 /* Calculator.swift */; };
 		236BAEC22937E3FD00DE02D2 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BAEC12937E3FD00DE02D2 /* BottomButton.swift */; };
 		239F5AD929DD88A20085938A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 239F5AD829DD88A20085938A /* README.md */; };
@@ -21,6 +21,8 @@
 		23C8DAE0292CBDB90053AB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C8DADF292CBDB90053AB09 /* Assets.xcassets */; };
 		23C8DAE3292CBDB90053AB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C8DAE2292CBDB90053AB09 /* Preview Assets.xcassets */; };
 		23C8DAED292CBDBA0053AB09 /* BMICalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8DAEC292CBDBA0053AB09 /* BMICalculatorTests.swift */; };
+		D32CD2992B8339C200CC29A8 /* UISliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD2982B8339C200CC29A8 /* UISliderView.swift */; };
+		D32CD29B2B8353BA00CC29A8 /* BMIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32CD29A2B8353BA00CC29A8 /* BMIResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,9 @@
 		234058DC2A87F4220097427A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		234058DE2A87F6560097427A /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		236AB5F02930A79C008784D6 /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
-		236AB5F22930A8D6008784D6 /* HeightSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSlider.swift; sourceTree = "<group>"; };
-		236AB5F42930AB76008784D6 /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
-		236AB5F62930AC05008784D6 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		236AB5F22930A8D6008784D6 /* HeightSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSliderView.swift; sourceTree = "<group>"; };
+		236AB5F42930AB76008784D6 /* MeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsView.swift; sourceTree = "<group>"; };
+		236AB5F62930AC05008784D6 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		236BAEBF2937C7E000DE02D2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		236BAEC12937E3FD00DE02D2 /* BottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
 		239F5AD829DD88A20085938A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		23C8DAE2292CBDB90053AB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23C8DAE8292CBDBA0053AB09 /* BMICalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMICalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C8DAEC292CBDBA0053AB09 /* BMICalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorTests.swift; sourceTree = "<group>"; };
+		D32CD2982B8339C200CC29A8 /* UISliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderView.swift; sourceTree = "<group>"; };
+		D32CD29A2B8353BA00CC29A8 /* BMIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,11 @@
 		23C8DADA292CBDB70053AB09 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
-				234058DB2A87F40F0097427A /* Resources */,
-				23C8DB06292CBE780053AB09 /* Views */,
-				23C8DB05292CBE700053AB09 /* Model */,
 				23C8DADB292CBDB70053AB09 /* BMICalculatorApp.swift */,
 				23C8DADD292CBDB70053AB09 /* ContentView.swift */,
+				23C8DB05292CBE700053AB09 /* Model */,
+				23C8DB06292CBE780053AB09 /* Views */,
+				234058DB2A87F40F0097427A /* Resources */,
 				23C8DADF292CBDB90053AB09 /* Assets.xcassets */,
 				23C8DAE1292CBDB90053AB09 /* Preview Content */,
 			);
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				236BAEBF2937C7E000DE02D2 /* Calculator.swift */,
+				D32CD29A2B8353BA00CC29A8 /* BMIResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,11 +144,12 @@
 		23C8DB06292CBE780053AB09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				236AB5F22930A8D6008784D6 /* HeightSlider.swift */,
-				236AB5F02930A79C008784D6 /* GenderView.swift */,
-				236AB5F42930AB76008784D6 /* Measurements.swift */,
-				236AB5F62930AC05008784D6 /* Results.swift */,
 				236BAEC12937E3FD00DE02D2 /* BottomButton.swift */,
+				236AB5F02930A79C008784D6 /* GenderView.swift */,
+				236AB5F22930A8D6008784D6 /* HeightSliderView.swift */,
+				236AB5F42930AB76008784D6 /* MeasurementsView.swift */,
+				236AB5F62930AC05008784D6 /* ResultsView.swift */,
+				D32CD2982B8339C200CC29A8 /* UISliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					23C8DAD7292CBDB70053AB09 = {
 						CreatedOnToolsVersion = 14.1;
@@ -273,13 +279,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				234058DD2A87F4220097427A /* Theme.swift in Sources */,
-				236AB5F72930AC05008784D6 /* Results.swift in Sources */,
+				236AB5F72930AC05008784D6 /* ResultsView.swift in Sources */,
 				236AB5F12930A79C008784D6 /* GenderView.swift in Sources */,
+				D32CD2992B8339C200CC29A8 /* UISliderView.swift in Sources */,
 				236BAEC02937C7E000DE02D2 /* Calculator.swift in Sources */,
-				236AB5F32930A8D6008784D6 /* HeightSlider.swift in Sources */,
+				D32CD29B2B8353BA00CC29A8 /* BMIResult.swift in Sources */,
+				236AB5F32930A8D6008784D6 /* HeightSliderView.swift in Sources */,
 				234058DF2A87F6560097427A /* Symbols.swift in Sources */,
 				23C8DADE292CBDB70053AB09 /* ContentView.swift in Sources */,
-				236AB5F52930AB76008784D6 /* Measurements.swift in Sources */,
+				236AB5F52930AB76008784D6 /* MeasurementsView.swift in Sources */,
 				236BAEC22937E3FD00DE02D2 /* BottomButton.swift in Sources */,
 				23C8DADC292CBDB70053AB09 /* BMICalculatorApp.swift in Sources */,
 			);
@@ -340,6 +348,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -400,6 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -431,7 +441,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +469,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
