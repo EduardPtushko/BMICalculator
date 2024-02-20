@@ -20,20 +20,21 @@ struct GenderView: View {
     }
 
     var body: some View {
-        VStack {
-            Text(icon)
-                .font(.system(size: 64))
-                .foregroundColor(.white)
-            Text(type.rawValue)
-                .foregroundColor(Theme.labelTextColor)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background {
-            RoundedRectangle(cornerRadius: 8)
-                .fill(isActive ? Theme.activeCard : Theme.inactiveCard)
-        }
-        .onTapGesture {
+        Button {
             chosenGender = type
+        } label: {
+            VStack {
+                Text(icon)
+                    .font(.system(size: 64))
+                    .foregroundColor(.white)
+                Text(type.rawValue)
+                    .foregroundColor(Theme.labelTextColor)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(isActive ? Theme.activeCard : Theme.inactiveCard)
+            }
         }
     }
 }

@@ -31,6 +31,7 @@ struct MeasurementsView: View {
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Theme.iconBackground)
                 }
+                .accessibilityIdentifier("minus-button")
 
                 Button {
                     guard value < 120 else {
@@ -43,6 +44,7 @@ struct MeasurementsView: View {
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Theme.iconBackground)
                 }
+                .accessibilityIdentifier("plus-button")
             }
             .font(.title)
         }

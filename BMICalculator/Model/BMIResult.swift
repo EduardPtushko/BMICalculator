@@ -45,3 +45,5 @@ enum BMIResult {
         }
     }
 }
+
+extension BMIResult: Equatable {}

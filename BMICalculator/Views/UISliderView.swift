@@ -12,7 +12,7 @@ struct UISliderView: UIViewRepresentable {
     @Binding var value: Double
 
     var minValue = 20.0
-    var maxValue = 130.0
+    var maxValue = 240.0
     var thumbColor = UIColor(named: "bottom-container") ?? .systemRed
     var minTrackColor = UIColor(named: "label-text-color") ?? .systemRed
     var maxTrackColor: UIColor = .lightGray
