@@ -9,7 +9,7 @@ import Foundation
 
 class Calculator: ObservableObject {
     @Published var weight: Int = 56
-    @Published var height: Double = 240
+    @Published var height: Double = 170
     @Published var age: Int = 25
     @Published var gender: Gender = .male
     @Published var bmiResult: BMIResult?
