@@ -7,12 +7,13 @@
 
 import Foundation
 
-class Calculator: ObservableObject {
-    @Published var weight: Int = 56
-    @Published var height: Double = 170
-    @Published var age: Int = 25
-    @Published var gender: Gender = .male
-    @Published var bmiResult: BMIResult?
+@Observable
+class Calculator {
+    var weight: Int = 56
+    var height: Double = 170
+    var age: Int = 25
+    var gender: Gender = .male
+    var bmiResult: BMIResult?
 
     func calculateBMI() {
         let bmi = Double(weight) / pow(height / 100, 2)

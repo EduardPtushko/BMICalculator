@@ -8,63 +8,60 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var calculator: Calculator
+    @Environment(Calculator.self) var calculator
 
-    var showingResults: Bool {
-        calculator.bmiResult != nil
-    }
+    var showingResults: Bool { calculator.bmiResult != nil }
 
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                VStack {
-                    Text("BMI CALCULATOR")
-                        .font(.title3)
-                        .fontWeight(.semibold)
+        @Bindable var calculator = calculator
 
-                    Divider()
-                        .frame(height: 6)
-                        .background {
-                            Color.black.opacity(0.4)
-                        }
+        ZStack {
+            VStack {
+                Text("BMI CALCULATOR")
+                    .font(.title3)
+                    .fontWeight(.semibold)
 
-                    Grid(alignment: .center, horizontalSpacing: 24, verticalSpacing: 24) {
-                        GridRow {
-                            GenderView(type: .male, icon: "⚦", chosenGender: $calculator.gender)
-                            GenderView(type: .female, icon: "♀", chosenGender: $calculator.gender)
-                        }
+                Divider()
+                    .frame(height: 6)
+                    .background(Color.black.opacity(0.4))
 
-                        GridRow {
-                            HeightSliderView(value: $calculator.height)
-                        }
-                        .gridCellColumns(2)
-
-                        GridRow {
-                            MeasurementsView(title: "WEIGHT", value: $calculator.weight)
-                            MeasurementsView(title: "AGE", value: $calculator.age)
-                        }
+                Grid(alignment: .center, horizontalSpacing: 24, verticalSpacing: 24) {
+                    GridRow {
+                        GenderView(type: .male, icon: "⚦", chosenGender: $calculator.gender)
+                        GenderView(type: .female, icon: "♀", chosenGender: $calculator.gender)
                     }
-                    .padding(.vertical, 4)
-                    .padding(.horizontal, 12)
 
-                    BottomButton(title: "CALCULATE", action: calculator.calculateBMI)
+                    GridRow {
+                        HeightSliderView(value: $calculator.height)
+                    }
+                    .gridCellColumns(2)
+
+                    GridRow {
+                        MeasurementsView(title: "WEIGHT", value: $calculator.weight)
+                        MeasurementsView(title: "AGE", value: $calculator.age)
+                    }
                 }
-                .foregroundColor(.white)
-                .edgesIgnoringSafeArea(.bottom)
-                .background(
-                    Color("primary")
-                )
-            }
+                .padding(.vertical, 4)
+                .padding(.horizontal, 12)
 
-            ResultsView()
-                .offset(x: showingResults ? 0 : proxy.size.width)
+                BottomButton(title: "CALCULATE", action: calculator.calculateBMI)
+            }
+            .foregroundColor(.white)
+            .edgesIgnoringSafeArea(.bottom)
+            .background(Theme.primary)
+
+            if showingResults {
+                ResultsView()
+                    .zIndex(1)
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .trailing)))
+
+            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(Calculator())
-    }
+
+#Preview {
+    ContentView()
+        .environment(Calculator())
 }

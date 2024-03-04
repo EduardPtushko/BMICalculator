@@ -39,8 +39,6 @@ struct GenderView: View {
     }
 }
 
-struct GenderView_Previews: PreviewProvider {
-    static var previews: some View {
-        GenderView(type: .female, icon: "♀", chosenGender: .constant(.female))
-    }
+#Preview {
+    GenderView(type: .female, icon: "♀", chosenGender: .constant(.female))
 }

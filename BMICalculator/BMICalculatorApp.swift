@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct BMICalculatorApp: App {
-    @StateObject var calculator = Calculator()
+    var calculator = Calculator()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(calculator)
+                .environment(calculator)
         }
     }
 }

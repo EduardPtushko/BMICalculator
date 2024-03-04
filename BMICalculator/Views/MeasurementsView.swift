@@ -56,8 +56,6 @@ struct MeasurementsView: View {
     }
 }
 
-struct Measurements_Previews: PreviewProvider {
-    static var previews: some View {
-        MeasurementsView(title: "WEIGHT", value: .constant(24))
-    }
+#Preview{
+    MeasurementsView(title: "WEIGHT", value: .constant(24))
 }

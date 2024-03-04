@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResultsView: View {
-    @EnvironmentObject var calculator: Calculator
+    @Environment(Calculator.self) var calculator
 
     var title: String {
         calculator.bmiResult?.title ?? ""
@@ -67,9 +67,7 @@ struct ResultsView: View {
     }
 }
 
-struct Results_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultsView()
-            .environmentObject(Calculator())
-    }
+#Preview {
+    ResultsView()
+        .environment(Calculator())
 }

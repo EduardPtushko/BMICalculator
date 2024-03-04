@@ -58,5 +58,6 @@ struct UISliderView: UIViewRepresentable {
 
 #Preview(body: {
     @State var height: Double = 150
+    
     return UISliderView(value: $height)
 })

@@ -10,7 +10,7 @@ import SwiftUI
 struct BottomButton: View {
     let title: String
     var action: () -> Void
-
+    
     var body: some View {
         Button {
             withAnimation {
@@ -32,8 +32,6 @@ struct BottomButton: View {
     }
 }
 
-struct BottomButton_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomButton(title: "CALCULATE", action: {})
-    }
+#Preview {
+    BottomButton(title: "CALCULATE", action: {})
 }
