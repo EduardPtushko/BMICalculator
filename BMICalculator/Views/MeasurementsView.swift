@@ -15,10 +15,12 @@ struct MeasurementsView: View {
         VStack {
             Text(title)
                 .foregroundColor(Theme.labelTextColor)
+
             Text("\(value)")
                 .font(.system(size: 50))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
+
             HStack {
                 Button {
                     guard value >= 0 else {
@@ -31,7 +33,7 @@ struct MeasurementsView: View {
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Theme.iconBackground)
                 }
-                .accessibilityIdentifier("minus-button")
+                .accessibilityIdentifier("minusButton")
 
                 Button {
                     guard value < 120 else {
@@ -44,7 +46,7 @@ struct MeasurementsView: View {
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Theme.iconBackground)
                 }
-                .accessibilityIdentifier("plus-button")
+                .accessibilityIdentifier("plusButton")
             }
             .font(.title)
         }

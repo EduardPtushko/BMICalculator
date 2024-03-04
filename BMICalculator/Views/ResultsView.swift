@@ -60,6 +60,7 @@ struct ResultsView: View {
             BottomButton(title: "RE-CALCULATE") {
                 calculator.bmiResult = nil
             }
+            .accessibilityIdentifier("recalculateButton")
         }
         .foregroundColor(.white)
         .edgesIgnoringSafeArea(.bottom)

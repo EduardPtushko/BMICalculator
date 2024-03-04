@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GenderView: View {
     let type: Gender
-    let icon: String
+    let icon: Image
     @Binding var chosenGender: Gender
 
     var isActive: Bool {
@@ -24,9 +24,11 @@ struct GenderView: View {
             chosenGender = type
         } label: {
             VStack {
-                Text(icon)
+                icon
+                    .renderingMode(.template)
                     .font(.system(size: 64))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
+
                 Text(type.rawValue)
                     .foregroundColor(Theme.labelTextColor)
             }
@@ -40,5 +42,5 @@ struct GenderView: View {
 }
 
 #Preview {
-    GenderView(type: .female, icon: "♀", chosenGender: .constant(.female))
+    GenderView(type: .female, icon: Symbols.male, chosenGender: .constant(.female))
 }

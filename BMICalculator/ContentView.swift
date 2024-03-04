@@ -27,8 +27,11 @@ struct ContentView: View {
 
                 Grid(alignment: .center, horizontalSpacing: 24, verticalSpacing: 24) {
                     GridRow {
-                        GenderView(type: .male, icon: "⚦", chosenGender: $calculator.gender)
-                        GenderView(type: .female, icon: "♀", chosenGender: $calculator.gender)
+                        GenderView(type: .male, icon: Symbols.male, chosenGender: $calculator.gender)
+                            .accessibilityIdentifier("maleButton")
+
+                        GenderView(type: .female, icon: Symbols.female, chosenGender: $calculator.gender)
+                            .accessibilityIdentifier("femaleButton")
                     }
 
                     GridRow {
@@ -38,6 +41,7 @@ struct ContentView: View {
 
                     GridRow {
                         MeasurementsView(title: "WEIGHT", value: $calculator.weight)
+
                         MeasurementsView(title: "AGE", value: $calculator.age)
                     }
                 }
@@ -45,6 +49,7 @@ struct ContentView: View {
                 .padding(.horizontal, 12)
 
                 BottomButton(title: "CALCULATE", action: calculator.calculateBMI)
+                    .accessibilityIdentifier("calculateButton")
             }
             .foregroundColor(.white)
             .edgesIgnoringSafeArea(.bottom)
@@ -54,7 +59,7 @@ struct ContentView: View {
                 ResultsView()
                     .zIndex(1)
                     .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .trailing)))
-
+                    
             }
         }
     }

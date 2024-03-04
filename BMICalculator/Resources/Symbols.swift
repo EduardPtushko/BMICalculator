@@ -11,4 +11,6 @@ import SwiftUI
 enum Symbols {
     static let minus = Image(systemName: "minus.circle.fill")
     static let plus = Image(systemName: "plus.circle.fill")
+    static let male = Image(.maleSymbol)
+    static let female = Image(.femaleSymbol)
 }

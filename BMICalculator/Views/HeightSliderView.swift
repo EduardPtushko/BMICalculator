@@ -23,6 +23,7 @@ struct HeightSliderView: View {
             
             UISliderView(value: $value)
                 .tint(Color(hue: 0.964, saturation: 0.664, brightness: 0.662))
+                .accessibilityIdentifier("heightSlider")
         }
         .frame(maxWidth: .infinity)
         .padding()
